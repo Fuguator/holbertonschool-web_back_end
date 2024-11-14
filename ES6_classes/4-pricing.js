@@ -15,14 +15,14 @@ export default class Pricing {
   }
 
   displayFullCurrency() {
-    return `${Currency._name} (${Currency._code})`;
-  }
-
-  convertPrice(amount, conversionRate) {
-    return amount * conversionRate;
+    return `${this.currency.name} (${this.currency.code})`;
   }
 
   displayFullPrice() {
-    return `${this.amount} ${this.currency} (${Currency._code})`;
+    return `${this.amount} ${this.displayFullCurrency()}`;
+  }
+
+  static convertPrice(amount, conversionRate) {
+    return amount * conversionRate;
   }
 }
