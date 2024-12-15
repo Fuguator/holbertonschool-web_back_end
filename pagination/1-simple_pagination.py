@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Simple pagination"""
 import csv
-import math
 from typing import List
+
 
 def index_range(page, page_size):
     """Simple helper function"""
