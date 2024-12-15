@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Hypermedia pagination"""
-from typing import List
+"""
+Pagination: Simple Task
+"""
+from typing import Tuple, List
 import csv
 import math
 
@@ -26,7 +28,6 @@ class Server:
 
         return self.__dataset
 
-
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Getting page
         """
@@ -41,10 +42,9 @@ class Server:
         except IndexError:
             return []
 
-
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
-        """Hypermedia pagination"""
-        data = self.get_page(page = page, page_size = page_size)
+        '''Hypermedia pagination'''
+        data = self.get_page(page=page, page_size=page_size)
         total_len = len(self.dataset())
         total_pages = math.ceil(total_len / page_size)
 
