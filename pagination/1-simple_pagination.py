@@ -10,6 +10,7 @@ def index_range(page, page_size):
     end = start + page_size
     return (start, end)
 
+
 class Server:
     """Server class to paginate a database of popular baby names.
     """
