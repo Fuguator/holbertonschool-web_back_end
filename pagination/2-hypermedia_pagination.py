@@ -26,6 +26,7 @@ class Server:
 
         return self.__dataset
 
+
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Getting page
         """
@@ -39,6 +40,7 @@ class Server:
             return self.dataset()[s:e]
         except IndexError:
             return []
+
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
         """Hypermedia pagination"""
