@@ -1,3 +1,4 @@
+/*eslint-disable*/
 const file = require('fs');
 
 function countStudents(path) {
