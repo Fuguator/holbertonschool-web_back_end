@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import router from './routes';
 
 const express = require('express');
